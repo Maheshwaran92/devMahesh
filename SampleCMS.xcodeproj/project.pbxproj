@@ -51,6 +51,7 @@
 		327904AB1E1FEFED00F6C7D5 /* SampleCMSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleCMSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		327904AF1E1FEFED00F6C7D5 /* SampleCMSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleCMSUITests.m; sourceTree = "<group>"; };
 		327904B11E1FEFED00F6C7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32BCC90C1E41EB2400CCD46A /* SampleCMS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleCMS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		327904891E1FEFED00F6C7D5 /* SampleCMS */ = {
 			isa = PBXGroup;
 			children = (
+				32BCC90C1E41EB2400CCD46A /* SampleCMS.entitlements */,
 				3279048D1E1FEFED00F6C7D5 /* AppDelegate.h */,
 				3279048E1E1FEFED00F6C7D5 /* AppDelegate.m */,
 				327904901E1FEFED00F6C7D5 /* ViewController.h */,
@@ -207,7 +209,13 @@
 				TargetAttributes = {
 					327904861E1FEFED00F6C7D5 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = K94SMMUA6S;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					3279049F1E1FEFED00F6C7D5 = {
 						CreatedOnToolsVersion = 8.1;
@@ -422,6 +430,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleCMS/SampleCMS.entitlements;
+				DEVELOPMENT_TEAM = K94SMMUA6S;
 				INFOPLIST_FILE = SampleCMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vsprojects.SampleCMS;
@@ -433,6 +443,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleCMS/SampleCMS.entitlements;
+				DEVELOPMENT_TEAM = K94SMMUA6S;
 				INFOPLIST_FILE = SampleCMS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vsprojects.SampleCMS;
@@ -505,6 +517,7 @@
 				327904B61E1FEFED00F6C7D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		327904B71E1FEFED00F6C7D5 /* Build configuration list for PBXNativeTarget "SampleCMSTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +526,7 @@
 				327904B91E1FEFED00F6C7D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		327904BA1E1FEFED00F6C7D5 /* Build configuration list for PBXNativeTarget "SampleCMSUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +535,7 @@
 				327904BC1E1FEFED00F6C7D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
